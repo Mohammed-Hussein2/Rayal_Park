@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <title>Web Design | Rayal Park</title>
+  </head>
+  <body>
+    <!-- start Header -->
+    <header class="header" x-data="{showAside:false}">
+      <nav
+        class="py-8 px-4 max-md:bg-primary max-md:py-4 max-w-maxWidth mx-auto flex justify-between items-center"
+      >
+        <!-- logo -->
+        <a href="#" class="logo">
+          <img src="./src/images/logo.png" class="logo-img w-34" alt="Logo" />
+        </a>
+
+        <!-- links Men -->
+        <ul
+          class="flex justify-cenetr max-md:hidden space-x-10 max-lg:space-x-7 items-center"
+        >
+          <li class="menu-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Services</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Explore</a>
+          </li>
+          <li class="menu-item">
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+
+        <!-- icon to open links in mobile -->
+        <span
+          @click="showAside = true"
+          class="text-2xl text-white hidden max-md:block cursor-pointer"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </span>
+
+        <button class="custom-btn max-md:hidden">Book Now</button>
+      </nav>
+      <!-- header content -->
+      <div
+        class="flex justify-center items-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex-col container_section max-md:px-0"
+      >
+        <p class="text-white opacity-60 mb-6 text-2xl whitespace-nowrap">
+          Simple - Unique - Friendly
+        </p>
+
+        <h2 class="text-white text-6xl font-medium leading-16 text-center">
+          Make Yourself At Home <br />
+          In Our <span class="text-primary">Hotel</span>.
+        </h2>
+      </div>
+      <!-- sidebar in mobile -->
+      <aside
+        x-show="showAside"
+        @click.outside="showAside = false"
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="-translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="-translate-x-full"
+        class="fixed top-0 h-screen w-2/3 pt-10 bg-primary-dark text-white"
+      >
+        <span
+          @click="showAside = false"
+          class="absolute top-3 text-2xl cursor-pointer right-3"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </span>
+        <!-- logo -->
+        <a href="#" class="logo flex justify-center items-center">
+          <img src="./src/images/logo.png" class="logo-img w-34" alt="Logo" />
+        </a>
+
+        <ul class="flex justify-start mt-12 space-y-10 items-center flex-col">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Explore</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </aside>
+    </header>
+    <!-- End Header  -->
+
+    <!-- start main content  -->
+    <main>
+      <!-- form section -->
+      <section class="container_section">
+        <div
+          class="bg-white px-10 py-6 max-w-maxWidth w-full shadow-custom absolute top-11/12 left-1/2 -translate-x-1/2 rounded-md my-auto"
+        >
+          <form
+            class="flex justify-between max-sm:flex-col max-md:space-y-7 flex-wrap max-lg:space-y-6 items-center"
+          >
+            <div class="flex justify-between text-sm items-center gap-4">
+              <span class="text-2xl text-primary">
+                <i class="fa-solid fa-calendar-days"></i>
+              </span>
+              <div>
+                <label class="block pb-1" for="check-in">CHECK-IN</label>
+                <input
+                  type="text"
+                  class="outline-none border-none max-w-38 text-[14px]"
+                  name="check-in"
+                  placeholder="CHECK IN"
+                />
+              </div>
+            </div>
+
+            <div class="flex justify-between text-sm items-center gap-4">
+              <span class="text-2xl text-primary">
+                <i class="fa-solid fa-calendar-days"></i>
+              </span>
+
+              <div>
+                <label class="block pb-1" for="check-out">CHECK-OUT</label>
+                <input
+                  type="text"
+                  class="outline-none border-none max-w-38 text-[14px]"
+                  name="check-out"
+                  placeholder="CHECK OUT"
+                />
+              </div>
+            </div>
+
+            <div class="flex justify-between text-sm items-center gap-4">
+              <span class="text-2xl text-primary">
+                <i class="fa fa-user"></i>
+              </span>
+              <div>
+                <label class="block pb-1" for="guest">Guest</label>
+                <input
+                  type="text"
+                  class="outline-none border-none max-w-38 text-[14px]"
+                  name="guest"
+                  placeholder="Guest"
+                />
+              </div>
+            </div>
+
+            <button
+              class="custom-btn max-lg:mx-auto max-md:mx-auto whitespace-nowrap"
+            >
+              CHECK OUT
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- About Section -->
+
+      <section class="container_section max-md:mt-34">
+        <div class="md:flex justify-between items-center">
+          <img
+            src="src/images/about.jpg"
+            class="md:max-w-[650px] object-cover sm:h-[400px] md:max-h-[450px] w-full flex mx-auto rounded-md pr-5 lg:px-10"
+            alt="About Image"
+          />
+
+          <div class="space-y-5 mt-6 lg:mt-0 lg:ml-10">
+            <h2 class="custom-title">ABOUT US</h2>
+            <h3 class="text-4xl font-bold max-w-[500px]">
+              The Best Holidays Start Here!
+            </h3>
+            <p class="text-gray tracking-[1px] leading-6">
+              With a focus on quality accommodations, personalized experiences,
+              and seamless booking, our platform is dedicated to ensuring that
+              every traveler embarks on their dream holiday with confidence and
+              excitement.
+            </p>
+            <button class="custom-btn">Read More</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR LIVING ROOM -->
+
+      <section class="container_section">
+        <div class="max-w-[500px]">
+          <h2 class="custom-title after:!left-50">OUR LIVING ROOM</h2>
+          <h3 class="text-4xl font-bold pt-2">
+            The Most Memorable Rest Time Starts Here.
+          </h3>
+        </div>
+        <!-- cards -->
+        <div
+          class="mt-8 space-y-6 md:space-y-0 md:grid-cols-2 md:grid lg:grid-cols-3 gap-6"
+        >
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-1.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-2.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-3.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-1.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-2.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+
+          <!-- card -->
+          <div class="shadow-custom rounded-lg">
+            <div class="relative">
+              <img
+                src="src/images/room-1.jpg"
+                class="rounded-t-md w-full object-cover"
+                alt="Room Image"
+              />
+              <!-- icons -->
+              <div class="absolute right-2 bottom-3 flex space-x-2">
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#f472b6] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#c084fc] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span
+                  class="w-9 h-9 text-xl cursor-pointer text-[#60a5fa] rounded-full bg-white flex justify-center items-center"
+                >
+                  <i class="fa-solid fa-fill"></i>
+                </span>
+              </div>
+            </div>
+
+            <div class="px-3 py-5 space-y-3">
+              <h3 class="text-lg">Deluxe Ocean View</h3>
+              <p class="text-gray">
+                Bask in luxury with breathtaking ocean views from your private
+                suite.
+              </p>
+              <p class="text-gray">
+                Starting from
+                <span class="text-black font-bold">$299/night</span>
+              </p>
+              <button class="custom-btn">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES Section -->
+
+      <section
+        class="relative bg-[url('./src/images/service.jpg')] w-full h-full bg-no-repeat bg-cover bg-center"
+      >
+        <div class="container_section !py-0">
+          <!-- overlay -->
+          <div class="absolute inset-0 bg-black/40"></div>
+
+          <div class="relative z-10 flex justify-end">
+            <div class="bg-white l p-10 h-full w-xl">
+              <h2 class="custom-title mb-4 text-secondary">SERVICES</h2>
+              <h3 class="text-3xl font-black max-w-[300px]">
+                Strive Only For The Best.
+              </h3>
+
+              <div class="pt-8 grid gap-6 mt-8 grid-cols-1">
+                <div class="flex text-lg font-medium items-center gap-4">
+                  <span
+                    class="bg-[#dbeafe] text-[#60a5fa] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
+                  >
+                    <i class="fa-solid fa-shield-halved text-secondary"></i>
+                  </span>
+                  <p>High Class Security</p>
+                </div>
+
+                <div class="flex text-lg font-medium items-center gap-4">
+                  <span
+                    class="bg-[#fce7f3] text-[#f472b6] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
+                  >
+                    <i class="fa-regular fa-clock text-secondary"></i>
+                  </span>
+                  <p>24 Hours Room Service</p>
+                </div>
+
+                <div class="flex text-lg font-medium items-center gap-4">
+                  <span
+                    class="text-[#c084fc] bg-[#f3e8ff] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
+                  >
+                    <i class="fa-regular fa-headphones text-secondary"></i>
+                  </span>
+                  <p>Conference Room</p>
+                </div>
+
+                <div class="flex text-lg font-medium items-center gap-4">
+                  <span
+                    class="text-[#fb7185] bg-[#ffe4e6] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
+                  >
+                    <i class="fa-solid fa-book-open text-secondary"></i>
+                  </span>
+                  <p>Tourist Guide Support</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container_section">
+        <ul
+          class="bg-white py-8 rounded-lg shadow-custom md:flex space-y-12 md:space-y-0 justify-around items-center"
+        >
+          <li class="text-center">
+            <p class="text-4xl pb-2 font-semibold">25+</p>
+            <p class="text-gray text-md font-medium">Properties Available</p>
+          </li>
+          <li class="text-center">
+            <p class="text-4xl pb-2 font-semibold">350+</p>
+            <p class="text-gray text-md font-medium">Bookings Completed</p>
+          </li>
+          <li class="text-center">
+            <p class="text-4xl pb-2 font-semibold">600+</p>
+            <p class="text-gray text-md font-medium">Happy Customers</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Explore Section -->
+
+      <section>
+        <div class="grid justify-center items-center mb-16">
+          <h2 class="custom-title text-center after:!left-58 after:w-15">
+            EXPLORE
+          </h2>
+          <h3 class="text-4xl font-bold text-center pt-3">What's New Today.</h3>
+        </div>
+        <div
+          class="bg-[url('src/images/explore.jpg')] bg-center bg-no-repeat bg-cover"
+        >
+          <div class="container_section">
+            <div class="w-sm bg-white rounded-sm p-6">
+              <p class="text-gray pb-2">10th MAR 2023</p>
+              <h2 class="text-xl font-semibold pb-4">
+                A New Menu Is Available In Our Hotel.
+              </h2>
+              <button
+                class="hover:bg-primary px-6 py-3 cursor-pointer bg-white text-primary duration-300 rounded-md hover:text-white border border-primary outline-none font-medium"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-gray">
+      <div class="container_section">
+        <div
+          class="grid grid-cols-1 space-y-6 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 justify-center"
+        >
+          <div>
+            <img src="src/images/logo.png" class="w-44" alt="Logo" />
+            <p class="whitespace-wrap my-8 max-w-[250px]">
+              Discover a world of comfort, luxury, and adventure as you explore
+              our curated selection of hotels, making every moment of your
+              getaway truly extraordinary.
+            </p>
+            <button class="custom-btn">Book Now</button>
+          </div>
+
+          <div>
+            <h3 class="text-xl text-white font-semibold">QUICK LINKS</h3>
+            <ul class="my-8 space-y-4">
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Browse Destinations</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Special Offers & Packages</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Room Types & Amenities</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Customer Reviews & Ratingsa</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Travel Tips & Guides</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl text-white font-semibold">OUR SERVICES</h3>
+            <ul class="my-8 space-y-4">
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Concierge Assistance</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Flexible Booking Options</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Airport Transfers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white duration-300"
+                  >Wellness & Recreation</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl text-white font-semibold">CONTACT US</h3>
+            <a href="#" class="my-8 hover:text-white duration-300 block"
+              >rayalpark@info.com</a
+            >
+            <div class="flex gap-3 items-center">
+              <a href="#">
+                <img
+                  src="src/images/facebook.png"
+                  class="w-6 opacity-80 hover:opacity-100 duration-300"
+                  alt="facebook"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="src/images/youtube.png"
+                  class="w-8 opacity-80 hover:opacity-100 duration-300"
+                  alt="youtube"
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="src/images/instagram.png"
+                  class="w-6 opacity-80 hover:opacity-100 duration-300"
+                  alt="instagram"
+                />
+              </a>
+
+              <a href="#">
+                <img
+                  src="src/images/twitter.png"
+                  class="w-6 opacity-80 hover:opacity-100 duration-300"
+                  alt="twitter"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="flex justify-center items-center py-3 pb-3">
+        Powered By
+        <a
+          href="https://github.com/Mohammed-Hussein2"
+          class="hover:text-white hover:underline pl-3"
+          >Mohammed Hussein</a
+        >
+      </p>
+    </footer>
+    <!-- end main content  -->
+    <script type="module" defer src="./src/js/main.js"></script>
+  </body>
+</html>

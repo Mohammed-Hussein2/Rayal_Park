@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #e82574;
+  --color-primary-dark: #bc1c5c;
+  --color-gray: #78716c;
+  /* box shaow  */
+  --shadow-custom: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  /* font family  */
+  --font-family: "Poppins", sans-serif;
+
+  --text-sm: 16px;
+  /* container */
+  --container-maxWidth: 1200px;
+
+  /* breakPoints */
+  --breakpoint-md: 768px;
+}
+
+/* start global Styling */
+
+body {
+  @apply font-family scroll-smooth;
+}
+
+.container_section {
+  @apply max-w-maxWidth px-4 py-20 mx-auto;
+}
+
+.custom-btn {
+  @apply bg-primary px-6 py-3 cursor-pointer hover:bg-primary-dark duration-300 rounded-md text-white border-none outline-none font-medium;
+}
+
+.custom-title {
+  @apply uppercase text-lg w-full tracking-[2px] font-semibold relative after:absolute after:left-32 
+   after:w-20 after:top-1/2 after:h-[2.5px] after:bg-primary;
+}
+/* End global Styling */
+
+/* start header Styling */
+.header {
+  @apply bg-[url('../images/header.jpg')] bg-cover w-full h-screen  bg-no-repeat bg-center;
+}
+
+.header .menu-item {
+  @apply text-white text-sm  relative  py-2;
+}
+
+.menu-item a {
+  @apply after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:duration-300 after:ease-in-out after:h-[3px] after:rounded-md after:bg-primary;
+}
+
+/* End header Styling */
+
+/* start about Styling */
+
+/* end about Styling */
