@@ -19,8 +19,8 @@
 
 /* start global Styling */
 
-body {
-  @apply font-family scroll-smooth;
+body , html {
+  @apply font-family scroll-smooth ;
 }
 
 .container_section {
@@ -39,7 +39,7 @@ body {
 
 /* start header Styling */
 .header {
-  @apply bg-[url('../images/header.jpg')] bg-cover w-full h-screen  bg-no-repeat bg-center;
+  @apply bg-[url('../images/header.jpg')]   bg-cover w-full h-screen  bg-no-repeat bg-center;
 }
 
 .header .menu-item {

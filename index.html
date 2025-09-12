@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Link Google Fonts  -->
@@ -22,13 +21,17 @@
       onload="this.media='all'"
     />
 
+   
+
     <title>Web Design | Rayal Park</title>
   </head>
   <body>
     <!-- start Header -->
     <header class="header" x-data="{showAside:false}">
       <nav
-        class="py-8 px-4 max-md:bg-primary max-md:py-4 max-w-maxWidth mx-auto flex justify-between items-center"
+        class="py-8 px-4 max-md:bg-primary max-md:fixed max-md:top-0 max-md:w-full max-md:z-50 max-md:py-4 max-w-maxWidth mx-auto flex justify-between items-center"
+        data-aos="fade-down"
+        data-aos-duration="800"
       >
         <!-- logo -->
         <a href="#" class="logo">
@@ -40,19 +43,16 @@
           class="flex justify-cenetr max-md:hidden space-x-10 max-lg:space-x-7 items-center"
         >
           <li class="menu-item">
-            <a href="#">Home</a>
+            <a href="#Home">Home</a>
           </li>
           <li class="menu-item">
-            <a href="#">About</a>
+            <a href="#About">About</a>
           </li>
           <li class="menu-item">
-            <a href="#">Services</a>
+            <a href="#Services">Services</a>
           </li>
           <li class="menu-item">
-            <a href="#">Explore</a>
-          </li>
-          <li class="menu-item">
-            <a href="#">Contact</a>
+            <a href="#Explore">Explore</a>
           </li>
         </ul>
 
@@ -68,6 +68,8 @@
       </nav>
       <!-- header content -->
       <div
+        data-aos="fade-up" 
+        id="Home"
         class="flex justify-center items-center absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex-col container_section max-md:px-0"
       >
         <p class="text-white opacity-60 mb-6 text-2xl whitespace-nowrap">
@@ -104,20 +106,18 @@
 
         <ul class="flex justify-start mt-12 space-y-10 items-center flex-col">
           <li>
-            <a href="#">Home</a>
+            <a href="#Home">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#About">About</a>
           </li>
           <li>
-            <a href="#">Services</a>
+            <a href="#Services">Services</a>
           </li>
           <li>
-            <a href="#">Explore</a>
+            <a href="#Explore">Explore</a>
           </li>
-          <li>
-            <a href="#">Contact</a>
-          </li>
+        
         </ul>
       </aside>
     </header>
@@ -126,9 +126,11 @@
     <!-- start main content  -->
     <main>
       <!-- form section -->
-      <section class="container_section">
+      <section  class="container_section">
         <div
           class="bg-white px-10 py-6 max-w-maxWidth w-full shadow-custom absolute top-11/12 left-1/2 -translate-x-1/2 rounded-md my-auto"
+          data-aos="zoom-in-up"
+          data-aos-duration="900"
         >
           <form
             class="flex justify-between max-sm:flex-col max-md:space-y-7 flex-wrap max-lg:space-y-6 items-center"
@@ -190,15 +192,17 @@
 
       <!-- About Section -->
 
-      <section class="container_section max-md:mt-34">
+      <section id="About" class="container_section max-md:mt-34">
         <div class="md:flex justify-between items-center">
           <img
             src="src/images/about.jpg"
             class="md:max-w-[650px] object-cover sm:h-[400px] md:max-h-[450px] w-full flex mx-auto rounded-md pr-5 lg:px-10"
             alt="About Image"
+            data-aos="fade-right"
+            data-aos-duration="900"
           />
 
-          <div class="space-y-5 mt-6 lg:mt-0 lg:ml-10">
+          <div class="space-y-5 mt-6 lg:mt-0 lg:ml-10" data-aos="fade-left" data-aos-duration="900">
             <h2 class="custom-title">ABOUT US</h2>
             <h3 class="text-4xl font-bold max-w-[500px]">
               The Best Holidays Start Here!
@@ -217,7 +221,7 @@
       <!-- OUR LIVING ROOM -->
 
       <section class="container_section">
-        <div class="max-w-[500px]">
+        <div class="max-w-[500px]" data-aos="flip-up" data-aos-duration="800">
           <h2 class="custom-title after:!left-50">OUR LIVING ROOM</h2>
           <h3 class="text-4xl font-bold pt-2">
             The Most Memorable Rest Time Starts Here.
@@ -228,7 +232,7 @@
           class="mt-8 space-y-6 md:space-y-0 md:grid-cols-2 md:grid lg:grid-cols-3 gap-6"
         >
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="800">
             <div class="relative">
               <img
                 src="src/images/room-1.jpg"
@@ -269,7 +273,7 @@
             </div>
           </div>
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900">
             <div class="relative">
               <img
                 src="src/images/room-2.jpg"
@@ -310,7 +314,7 @@
             </div>
           </div>
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="flip-left" data-aos-delay="200" data-aos-duration="900">
             <div class="relative">
               <img
                 src="src/images/room-3.jpg"
@@ -351,7 +355,7 @@
             </div>
           </div>
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="flip-right" data-aos-delay="300" data-aos-duration="900">
             <div class="relative">
               <img
                 src="src/images/room-1.jpg"
@@ -392,7 +396,7 @@
             </div>
           </div>
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="fade-up-right" data-aos-delay="400" data-aos-duration="900">
             <div class="relative">
               <img
                 src="src/images/room-2.jpg"
@@ -434,7 +438,7 @@
           </div>
 
           <!-- card -->
-          <div class="shadow-custom rounded-lg">
+          <div class="shadow-custom rounded-lg" data-aos="fade-up-left" data-aos-delay="500" data-aos-duration="900">
             <div class="relative">
               <img
                 src="src/images/room-1.jpg"
@@ -479,7 +483,7 @@
 
       <!-- SERVICES Section -->
 
-      <section
+      <section id="Services"
         class="relative bg-[url('./src/images/service.jpg')] w-full h-full bg-no-repeat bg-cover bg-center"
       >
         <div class="container_section !py-0">
@@ -487,14 +491,14 @@
           <div class="absolute inset-0 bg-black/40"></div>
 
           <div class="relative z-10 flex justify-end">
-            <div class="bg-white l p-10 h-full w-xl">
+            <div class="bg-white l p-10 h-full w-xl" data-aos="fade-left" data-aos-duration="900">
               <h2 class="custom-title mb-4 text-secondary">SERVICES</h2>
               <h3 class="text-3xl font-black max-w-[300px]">
                 Strive Only For The Best.
               </h3>
 
               <div class="pt-8 grid gap-6 mt-8 grid-cols-1">
-                <div class="flex text-lg font-medium items-center gap-4">
+                <div class="flex text-lg font-medium items-center gap-4" data-aos="fade-up" data-aos-delay="0">
                   <span
                     class="bg-[#dbeafe] text-[#60a5fa] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
                   >
@@ -503,7 +507,7 @@
                   <p>High Class Security</p>
                 </div>
 
-                <div class="flex text-lg font-medium items-center gap-4">
+                <div class="flex text-lg font-medium items-center gap-4" data-aos="fade-up" data-aos-delay="100">
                   <span
                     class="bg-[#fce7f3] text-[#f472b6] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
                   >
@@ -512,7 +516,7 @@
                   <p>24 Hours Room Service</p>
                 </div>
 
-                <div class="flex text-lg font-medium items-center gap-4">
+                <div class="flex text-lg font-medium items-center gap-4" data-aos="fade-up" data-aos-delay="200">
                   <span
                     class="text-[#c084fc] bg-[#f3e8ff] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
                   >
@@ -521,7 +525,7 @@
                   <p>Conference Room</p>
                 </div>
 
-                <div class="flex text-lg font-medium items-center gap-4">
+                <div class="flex text-lg font-medium items-center gap-4" data-aos="fade-up" data-aos-delay="300">
                   <span
                     class="text-[#fb7185] bg-[#ffe4e6] w-13 h-13 flex justify-center items-center rounded-full text-2xl"
                   >
@@ -535,19 +539,19 @@
         </div>
       </section>
 
-      <div class="container_section">
+      <div class="container_section" data-aos="zoom-in" data-aos-duration="800">
         <ul
           class="bg-white py-8 rounded-lg shadow-custom md:flex space-y-12 md:space-y-0 justify-around items-center"
         >
-          <li class="text-center">
+          <li class="text-center" data-aos="fade-up" data-aos-delay="0">
             <p class="text-4xl pb-2 font-semibold">25+</p>
             <p class="text-gray text-md font-medium">Properties Available</p>
           </li>
-          <li class="text-center">
+          <li class="text-center" data-aos="fade-up" data-aos-delay="100">
             <p class="text-4xl pb-2 font-semibold">350+</p>
             <p class="text-gray text-md font-medium">Bookings Completed</p>
           </li>
-          <li class="text-center">
+          <li class="text-center" data-aos="fade-up" data-aos-delay="200">
             <p class="text-4xl pb-2 font-semibold">600+</p>
             <p class="text-gray text-md font-medium">Happy Customers</p>
           </li>
@@ -556,8 +560,8 @@
 
       <!-- Explore Section -->
 
-      <section>
-        <div class="grid justify-center items-center mb-16">
+      <section id="Explore">
+        <div class="grid justify-center items-center mb-16" data-aos="fade-up" data-aos-duration="800">
           <h2 class="custom-title text-center after:!left-58 after:w-15">
             EXPLORE
           </h2>
@@ -567,7 +571,7 @@
           class="bg-[url('src/images/explore.jpg')] bg-center bg-no-repeat bg-cover"
         >
           <div class="container_section">
-            <div class="w-sm bg-white rounded-sm p-6">
+            <div class="w-sm bg-white rounded-sm p-6" data-aos="zoom-in" data-aos-duration="900">
               <p class="text-gray pb-2">10th MAR 2023</p>
               <h2 class="text-xl font-semibold pb-4">
                 A New Menu Is Available In Our Hotel.
@@ -588,7 +592,7 @@
         <div
           class="grid grid-cols-1 space-y-6 md:space-y-0 md:grid-cols-2 lg:grid-cols-4 justify-center"
         >
-          <div>
+          <div  >
             <img src="src/images/logo.png" class="w-44" alt="Logo" />
             <p class="whitespace-wrap my-8 max-w-[250px]">
               Discover a world of comfort, luxury, and adventure as you explore
@@ -598,7 +602,7 @@
             <button class="custom-btn">Book Now</button>
           </div>
 
-          <div>
+          <div  >
             <h3 class="text-xl text-white font-semibold">QUICK LINKS</h3>
             <ul class="my-8 space-y-4">
               <li>
@@ -629,7 +633,7 @@
             </ul>
           </div>
 
-          <div>
+          <div  >
             <h3 class="text-xl text-white font-semibold">OUR SERVICES</h3>
             <ul class="my-8 space-y-4">
               <li>
@@ -655,7 +659,7 @@
             </ul>
           </div>
 
-          <div>
+          <div  >
             <h3 class="text-xl text-white font-semibold">CONTACT US</h3>
             <a href="#" class="my-8 hover:text-white duration-300 block"
               >rayalpark@info.com</a
@@ -704,6 +708,8 @@
       </p>
     </footer>
     <!-- end main content  -->
+ 
+ 
     <script type="module" defer src="./src/js/main.js"></script>
   </body>
 </html>
